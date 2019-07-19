@@ -45,8 +45,5 @@ const App = () => {
   );
 }
 
-// function newPerson(data) {
-
-// }
 
 export default App;
