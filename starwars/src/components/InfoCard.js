@@ -1,31 +1,31 @@
 import React from "react";
-import 'semantic-ui-css/semantic.min.css';
-import { Name, Height, Birth, Gender, Home } from "./StyledWidgets";
+import { Name, Height, Birth, Gender, Home, Card } from "./StyledWidgets";
 
 
 export default function InfoCard({info}) {
     return (
         <div className="info-card">
-            <Name>
-                {info.name}
-            </Name>
+            <Card>
+                <Name>
+                    {info.name}
+                </Name>
 
-            <Height>
-                {info.height}
-            </Height>
+                <Height>
+                    Height:  {info.height}
+                </Height>
 
-            <Birth>
-                {info.birth_year}
-            </Birth>
+                <Birth>
+                    Birth Year:  {info.birth_year}
+                </Birth>
 
-            <Gender>
-                {info.gender}
-            </Gender>
+                <Gender>
+                    Gender:  {info.gender}
+                </Gender>
 
-            <Home>
-                {info.homeworld}
-            </Home>
-
+                <Home>
+                    Homeworld: {info.homeworld}
+                </Home>
+            </Card>
         </div>
 
     );

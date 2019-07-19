@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from "axios";
-import 'semantic-ui-css/semantic.min.css';
-import ImageCard from "./components/ImageCard";
 import InfoCard from "./components/InfoCard";
 
 const App = () => {
