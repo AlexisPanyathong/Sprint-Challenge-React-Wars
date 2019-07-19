@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from "axios";
+import 'semantic-ui-css/semantic.min.css';
 import ImageCard from "./components/ImageCard";
+import InfoCard from "./components/InfoCard";
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -19,27 +21,32 @@ const App = () => {
       //handle success
       console.log(`people api`, response.data);
 
-      console.log(setPeople); 
+      
+      
       setPeople(response.data.results);
-      console.log(response.data);
+      
 
-      response.data.results.map(result => {
-        const person = newPerson(result);
-        people.appendChild(person);
-      })
 
     });
   }, []);
+  console.log(people[0]);
+
 
   return (
     <div className="App">
+      
       <h1 className="Header">React Wars</h1>
-      <div>
-        <ImageCard key={people.results} imgUrl={people.results}/>
-      </div>
+      {people.map(person => (
+        <InfoCard key={person.name} info={person}/>
+      ))}
+    
       
     </div>
   );
 }
+
+// function newPerson(data) {
+
+// }
 
 export default App;

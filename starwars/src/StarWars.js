@@ -6,12 +6,12 @@ import ImageCard from "./components/ImageCard";
 export default function StarWars ({limit}) {
     const [people, setPeople] = useState([]);
 
-    useEffect(() => {
-    axios.get('https://swapi.co/api/people/')
-    .then(response => {
-        console.log(`people api`, response.data);
-    });
-    }, []);
+    // useEffect(() => {
+    // axios.get('https://swapi.co/api/people/')
+    // .then(response => {
+    //     console.log(`people api`, response.data);
+    // });
+    // }, []);
 
     return (
     <div className="star-wars">
@@ -28,16 +28,16 @@ export default function StarWars ({limit}) {
 // import React, { useState } from "react";
 // import StarWars from "./StarWars";
 
-// // const StarWarsPeople = () => {
-// //     const [peopleState, setPeopleState] = useState(people);
+// const StarWarsPeople = () => {
+//     const [peopleState, setPeopleState] = useState(people);
 
-// //     return (
-// //         // <div>
-// //         //     {people.map(people => (
-// //         //         <StarWars key={people} people={people}/>
-// //         //     ))}
-// //         // </div>
-// //     // )
-// // }
+//     return (
+//         <div>
+//             {people.map(people => (
+//                 <StarWars key={people} people={people}/>
+//             ))}
+//         </div>
+//     )
+// }
 
 // export default StarWars;
