@@ -16,11 +16,18 @@ const App = () => {
   useEffect(() => {
     axios.get('https://swapi.co/api/people/')
     .then(response => {
+      //handle success
       console.log(`people api`, response.data);
 
       console.log(setPeople); 
       setPeople(response.data.results);
       console.log(response.data);
+
+      response.data.results.map(result => {
+        const person = newPerson(result);
+        people.appendChild(person);
+      })
+
     });
   }, []);
 
